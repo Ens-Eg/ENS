@@ -1,10 +1,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx,js}",
+    "./components/**/*.{ts,tsx,jsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx,js}",
   ],
   theme: {
     container: {
@@ -15,6 +15,19 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        kufi: ['"Noto Kufi Arabic"', 'sans-serif'], // Custom font with fallback
+  
+      },
+      fontSize: {
+        'custom-size': '1.125rem', // Example custom size
+      },
+      backgroundImage: {
+        "banner-bg": "url('/bannerBg.jpg')",
+      },
+      heroImage: {
+        "banner-bg2": "url('main.jpg')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -66,7 +79,7 @@ module.exports = {
         },
         "automation-zoom-in": {
           "0%": { transform: "translateY(-30px) scale(0.2)" },
-          "100%": { transform: "transform: translateY(0px) scale(1)" },
+          "100%": { transform: "translateY(0px) scale(1)" },
         },
         "flip": {
           to: {

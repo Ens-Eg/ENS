@@ -1,7 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './custom.css';
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Noto Kufi Arabic;
 
+}
 @layer base {
   :root {
     /* Name: custom color palette
